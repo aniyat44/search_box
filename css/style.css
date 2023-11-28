@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu .menu_logo{  
+    width: 200px;
+}
+.menu .menu_logo img{
+    width: 100%;
+}
+.menu .menu_info ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu .menu_info ul li a{
+    font-size: 20px;
+    color: #000;
+    font-family: sans-serif;
+    padding: 20px;
+    position: relative;
+}
+.menu .menu_info ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background: black;
+    transition: .5s;
+}.menu ul li a:hover::after{
+    width: 100%;
+    left: 0;
+}
+.menu .menu_info ul .search_btn{
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+    transition: .5s;
+    cursor: pointer;
+    padding-top: 20px;
+}
+.menu .menu_info ul .search_btn:hover{
+    color: gray;
+}
+#search {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transform: scaleY(0);
+    display: none;
+    transition: .5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#search .open{
+    transform: scaleY(1);
+}
+#search form{
+    width: 600px;
+}
+#search input{
+    color: #fff;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #000;
+    background: none;
+    border-radius: 25px 0 0 25px;
+}
+#search .type_btn{
+    padding: 10px 20px 10px 10px;
+    border: 2px solid #000;
+    background: none;
+    border-radius: 0 25px 25px 0;
+    transition: .5s;
+}
+#search .type_btn:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+#search .close_btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #000;
+    background: none;
+    border: 1px solid #000;
+    transition: .5s;
+}
+#search .close_btn:hover{
+    background: rgba(0, 0, 0, 0.3);
+
+}
